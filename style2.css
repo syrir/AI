@@ -1,0 +1,14 @@
+.err
+{
+  color: red;
+  font-weight: bold;
+  padding-left: 5px;
+}
+.par
+{
+  visibility: hidden;
+  border-width: medium;
+  border-color: red;
+  border-style: solid;
+  color: red;
+}

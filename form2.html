@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>JavaScript</title>
+  <link rel = "stylesheet" type = "text/css" href = "style2.css" />
+  <meta name="author" content="Mateusz Kaluzny" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+</head>
+<body>
+  <p id="p1" name="paragraf" borderColor="red" class="par"></p>
+  <form name="dane_osobowe">
+    <table>
+      <tr><td>Imię</td><td><input type="text" id="imie" name="f_imie" onblur="return validate_text(this.form.f_imie);"></td><td><span class="err" id="e_imie" /></td></tr>
+      <tr><td>Nazwisko</td><td><input type="text" id="nazwisko" name="f_nazwisko"onblur="return validate_text(this.form.f_nazwisko);"></td><td><span class="err" id="e_nazwisko" /></td></tr>
+      <tr><td>E-mail</td><td><input type="text" id="email" name="f_email" onblur="return validate_email(this.form.f_email);"></td><td><span class="err" id="e_email" /></td></tr>
+      <tr><td>Data Urodzenia</td><td><input type="date" id="bdata" name="f_bdata" onblur="return validate_date(this.form.f_bdata);"></td><td><span class="err" id="e_bdata" /></td></tr>
+      <tr><td>Hasło</td><td><input type="password" id="password" name="f_password"onblur="return validate_Pass1(this.form.f_password);"></td><td><span class="err" id="e_password" /></td></tr>
+      <tr><td>Powtorz hasło</td><td><input type="password"  id="password2" name="f_password2" onblur="return validate_pass(this.form.f_password,this.form.f_password2);"></td><td><span class="err" id="e_password2" /></td></tr>
+      <tr><td>Opis</td><td><textarea rows="5" cols="20" name="opis" maxlength="100"></textarea><span class="err" id="e_textarea" />
+      </td></tr>
+      <tr id="button"><td colspan="2"><input type="button" value="Register" onclick="return validate(this.form);" id="register_button"></td></tr>
+    </table>
+    </form>
+<br><br><br><br>
+    <table class="tabela">
+      <tr>
+        <td>Kolumna 1</td>
+        <td>Kolumna 2</td>
+        <td><input type="button" value="Dodaj" id="addbutton" onclick="AddButton();" /></td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>
+          <input type="button" value="Edytuj" class="editbutton" onclick="EditButton(this)" />
+          <input type="button" value="Usun" class="deletebutton" onclick="DeleteButton(this)" />
+        </td>
+      </tr>
+      <tr>
+        <td>11</td>
+        <td>12</td>
+        <td>
+          <input type="button" value="Edytuj" class="editbutton" onclick="EditButton(this)" />
+          <input type="button" value="Usun" class="deletebutton" onclick="DeleteButton(this)" />
+        </td>
+      </tr>
+    </table>
+  <script type="text/javascript" src="form_check2.js"></script>
+</body>
+</html>
